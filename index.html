@@ -158,34 +158,46 @@
                         </div>
                     </div>
                 </div>
-         
-                <!-- <div class 
-                ="gallery-item videos">
-                    <div class="video-container img-placeholder">
-                        <i class="fas fa-play-circle"></i>
-                        <span>Rock Medley</span>
+
+                <!-- Vidéos YouTube -->
+                <div class="gallery-item videos">
+                    <div class="video-thumbnail" data-video-id="-YYmcH6Ay-w">
+                        <img src="https://img.youtube.com/vi/-YYmcH6Ay-w/maxresdefault.jpg" alt="Maquette" class="img-placeholder">
+                        <i class="fas fa-play-circle play-icon"></i>
                     </div>
                     <div class="overlay">
                         <div class="overlay-content">
-                            <h3>Rock Medley</h3>
-                            <p>Live au Café de la Musique</p>
-                            <button class="watch-btn">Regarder</button>
+                            <h3>Maquette</h3>
+                            <p>MATICES Live Session</p>
+                            <button class="watch-btn" data-video-id="-YYmcH6Ay-w">Regarder</button>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-item videos">
-                    <div class="video-container img-placeholder">
-                        <i class="fas fa-play-circle"></i>
-                        <span>Funk Session</span>
+                    <div class="video-thumbnail" data-video-id="CotahYSiVCc">
+                        <img src="https://img.youtube.com/vi/CotahYSiVCc/maxresdefault.jpg" alt="Iron Lion Zion" class="img-placeholder">
+                        <i class="fas fa-play-circle play-icon"></i>
                     </div>
                     <div class="overlay">
                         <div class="overlay-content">
-                            <h3>Funk Session</h3>
-                            <p>Festival Groove</p>
-                            <button class="watch-btn">Regarder</button>
+                            <h3>Iron Lion Zion</h3>
+                            <p>Cover Bob Marley</p>
+                            <button class="watch-btn" data-video-id="CotahYSiVCc">Regarder</button>
                         </div>
                     </div>
-                -->
+                </div>
+                <div class="gallery-item videos">
+                    <div class="video-thumbnail" data-video-id="PI5lTlOw-zE">
+                        <img src="https://img.youtube.com/vi/PI5lTlOw-zE/maxresdefault.jpg" alt="I Want To Break Free" class="img-placeholder">
+                        <i class="fas fa-play-circle play-icon"></i>
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>I Want To Break Free</h3>
+                            <p>Cover Queen</p>
+                            <button class="watch-btn" data-video-id="PI5lTlOw-zE">Regarder</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="load-more">
@@ -197,59 +209,59 @@
     <section id="music" class="section dark-bg">
         <div class="container">
             <h2 class="section-title light">Notre Musique</h2>
+
+            <!-- Audio element caché pour la lecture -->
+            <audio id="audio-player" preload="metadata"></audio>
+
             <div class="music-player">
                 <div class="player-info">
                     <div class="now-playing">
-                        <h3>En écoute: <span id="track-title">Titre de la chanson</span></h3>
-                        <p>Album: <span id="album-name">Nom de l'album</span></p>
+                        <h3>En écoute: <span id="track-title">Sélectionnez une chanson</span></h3>
+                        <p>Album: <span id="album-name">MATICES Live</span></p>
                     </div>
                     <div class="player-controls">
-                        <button id="prev-track"><i class="fas fa-step-backward"></i></button>
-                        <button id="play-pause"><i class="fas fa-play"></i></button>
-                        <button id="next-track"><i class="fas fa-step-forward"></i></button>
+                        <button id="prev-track" title="Piste précédente"><i class="fas fa-step-backward"></i></button>
+                        <button id="play-pause" title="Lecture/Pause"><i class="fas fa-play"></i></button>
+                        <button id="next-track" title="Piste suivante"><i class="fas fa-step-forward"></i></button>
                     </div>
                     <div class="progress-container">
-                        <div class="progress-bar">
-                            <div class="progress"></div>
+                        <div class="progress-bar" id="progress-bar">
+                            <div class="progress" id="progress"></div>
                         </div>
                         <div class="time-info">
                             <span id="current-time">0:00</span>
                             <span id="total-time">0:00</span>
                         </div>
                     </div>
+                    <div class="volume-container">
+                        <i class="fas fa-volume-up" id="volume-icon"></i>
+                        <input type="range" id="volume-slider" min="0" max="100" value="80">
+                    </div>
                 </div>
                 <div class="playlist">
                     <h3>Playlist</h3>
                     <ul id="playlist-items">
-                        <li class="playlist-item active">
+                        <li class="playlist-item" data-src="assets/music/cokaine.mp3">
                             <span class="track-number">1</span>
                             <span class="track-info">
-                                <span class="track-title">Rock Remix</span>
-                                <span class="track-duration">3:45</span>
+                                <span class="track-title">Cocaine (Cover J.J. Cale)</span>
+                                <span class="track-duration">--:--</span>
                             </span>
                             <button class="play-track"><i class="fas fa-play"></i></button>
                         </li>
-                        <li class="playlist-item">
+                        <li class="playlist-item" data-src="assets/music/iron_lion.mp3">
                             <span class="track-number">2</span>
                             <span class="track-info">
-                                <span class="track-title">Soul Vibe</span>
-                                <span class="track-duration">4:20</span>
+                                <span class="track-title">Iron Lion Zion (Cover Bob Marley)</span>
+                                <span class="track-duration">--:--</span>
                             </span>
                             <button class="play-track"><i class="fas fa-play"></i></button>
                         </li>
-                        <li class="playlist-item">
+                        <li class="playlist-item" data-src="assets/music/iwanttobreakfree.mp3">
                             <span class="track-number">3</span>
                             <span class="track-info">
-                                <span class="track-title">Funk Groove</span>
-                                <span class="track-duration">3:15</span>
-                            </span>
-                            <button class="play-track"><i class="fas fa-play"></i></button>
-                        </li>
-                        <li class="playlist-item">
-                            <span class="track-number">4</span>
-                            <span class="track-info">
-                                <span class="track-title">Reggae Sunshine</span>
-                                <span class="track-duration">5:10</span>
+                                <span class="track-title">I Want To Break Free (Cover Queen)</span>
+                                <span class="track-duration">--:--</span>
                             </span>
                             <button class="play-track"><i class="fas fa-play"></i></button>
                         </li>
