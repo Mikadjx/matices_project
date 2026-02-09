@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Membres - MATICES</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav id="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>MATICES</h1>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html#home">Accueil</a></li>
+                    <li><a href="index.html#about">À Propos</a></li>
+                    <li><a href="index.html#gallery">Galerie</a></li>
+                    <li><a href="index.html#music">Musique</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="members.html" class="login-btn active">Espace Membres</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section avec fond blanc -->
+    <section id="members" class="section" style="min-height: 100vh; padding-top: 120px; background-color: #f9f9f9;">
+        <div class="container">
+            <!-- Titre en sombre -->
+            <h2 class="section-title" style="color: #082032;">Espace Membres</h2>
+            
+            <!-- Card avec fond sombre -->
+            <div style="background-color: #2c394b; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); max-width: 500px; margin: 0 auto;">
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username" style="color: #f9f9f9;">Nom d'utilisateur</label>
+                        <input type="text" id="username" name="username" required style="background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #f9f9f9; padding: 12px; border-radius: 5px; width: 100%;">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" style="color: #f9f9f9;">Mot de passe</label>
+                        <input type="password" id="password" name="password" required style="background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #f9f9f9; padding: 12px; border-radius: 5px; width: 100%;">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Connexion</button>
+                    <p class="login-info" style="color: #f9f9f9; text-align: center; margin-top: 15px;"></p>
+                </form>
+                
+                <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                    <p style="color: #f9f9f9; margin-bottom: 20px; font-size: 0.9rem;">
+                        <i class="fas fa-lock"></i> Accès réservé aux membres du groupe MATICES
+                    </p>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MATICES</h2>
+                    <p>Rock • Soul • Funk • Reggae</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html#home">Accueil</a></li>
+                        <li><a href="index.html#about">À Propos</a></li>
+                        <li><a href="index.html#gallery">Galerie</a></li>
+                        <li><a href="index.html#music">Musique</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/maticesorleans" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/p/C8sQuuDKbvg" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/@maticesorleans" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MATICES. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
